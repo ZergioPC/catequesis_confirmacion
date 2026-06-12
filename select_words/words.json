@@ -1,0 +1,23 @@
+{
+  "title": "Selecciona los sacramentos",
+  "instruction": "Arrastra solo las palabras que sean sacramentos a la lista de selección",
+  "words": [
+    { "text": "bautismo", "correct": true },
+    { "text": "confesión", "correct": true },
+    { "text": "comunión", "correct": true },
+    { "text": "confirmación", "correct": true },
+    { "text": "uncion enfermos", "correct": true },
+    { "text": "orden sacerdotal", "correct": true },
+    { "text": "matrimonio", "correct": true },
+    { "text": "rosario", "correct": false },
+    { "text": "altar", "correct": false },
+    { "text": "evangelio", "correct": false },
+    { "text": "parroquia", "correct": false },
+    { "text": "crucifijo", "correct": false },
+    { "text": "catecismo", "correct": false },
+    { "text": "monaguillo", "correct": false },
+    { "text": "campanario", "correct": false },
+    { "text": "novena", "correct": false },
+    { "text": "catedral", "correct": false }
+  ]
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Words</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1 id="title"></h1>
+    <p id="instruction"></p>
+
+    <div class="game-area">
+      <div class="column source-column">
+        <h2>Palabras</h2>
+        <div id="source-container" class="word-container"></div>
+      </div>
+
+      <div class="column target-column">
+        <h2>Seleccionadas</h2>
+        <div id="target-container" class="word-container drop-zone"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="check-btn" class="btn btn-primary">Verificar</button>
+      <button id="reset-btn" class="btn btn-secondary">Reiniciar</button>
+    </div>
+
+    <div id="feedback"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

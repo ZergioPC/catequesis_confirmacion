@@ -1,0 +1,23 @@
+{
+  "title": "Selecciona los dones del Espíritu Santo",
+  "instruction": "Arrastra solo las palabras que sean dones del Espíritu Santo a la lista de selección",
+  "words": [
+    { "text": "sabiduría", "correct": true },
+    { "text": "entendimiento", "correct": true },
+    { "text": "consejo", "correct": true },
+    { "text": "fortaleza", "correct": true },
+    { "text": "ciencia", "correct": true },
+    { "text": "piedad", "correct": true },
+    { "text": "temor de Dios", "correct": true },
+    { "text": "rosario", "correct": false },
+    { "text": "altar", "correct": false },
+    { "text": "evangelio", "correct": false },
+    { "text": "parroquia", "correct": false },
+    { "text": "crucifijo", "correct": false },
+    { "text": "catecismo", "correct": false },
+    { "text": "monaguillo", "correct": false },
+    { "text": "campanario", "correct": false },
+    { "text": "novena", "correct": false },
+    { "text": "catedral", "correct": false }
+  ]
+}
