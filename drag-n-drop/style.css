@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+  width: 90%;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.instructions {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.game-area {
+  margin-bottom: 1.5rem;
+}
+
+.drop-zone {
+  min-height: 60px;
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  transition: background 0.2s, border-color 0.2s;
+  margin-bottom: 1rem;
+}
+
+.drop-zone.drag-over {
+  background: #e8f0fe;
+  border-color: #667eea;
+}
+
+.drop-zone .word {
+  background: #667eea;
+  color: white;
+}
+
+.word-pool {
+  min-height: 60px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.word {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+  background: #764ba2;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.word:active {
+  cursor: grabbing;
+}
+
+.word.dragging {
+  opacity: 0.4;
+  transform: scale(0.95);
+}
+
+.word.correct {
+  background: #27ae60;
+}
+
+.word.incorrect {
+  background: #e74c3c;
+  animation: shake 0.3s ease-in-out;
+}
+
+.word:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.drop-zone.empty {
+  color: #aaa;
+  font-style: italic;
+}
+
+.drop-zone.empty::after {
+  content: "Suelta las palabras aquí";
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.controls span {
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+#checkBtn {
+  background: #667eea;
+  color: white;
+}
+
+#checkBtn:hover {
+  background: #5a6fd6;
+}
+
+#nextBtn {
+  background: #27ae60;
+  color: white;
+}
+
+#nextBtn:hover {
+  background: #219a52;
+}
+
+#nextBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+#resetBtn {
+  background: #e74c3c;
+  color: white;
+}
+
+#resetBtn:hover {
+  background: #c0392b;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal h2 {
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.modal p {
+  margin-bottom: 1.5rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.modal button {
+  background: #667eea;
+  color: white;
+}
+
+.modal button:hover {
+  background: #5a6fd6;
+}

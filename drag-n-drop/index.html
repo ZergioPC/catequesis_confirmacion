@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordena las Palabras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Ordena las Palabras</h1>
+    <p class="instructions">Arrastra las palabras al orden correcto</p>
+
+    <div class="game-area">
+      <div class="drop-zone" id="dropZone"></div>
+      <div class="word-pool" id="wordPool"></div>
+    </div>
+
+    <div class="controls">
+      <span class="score">Puntuación: <span id="score">0</span></span>
+      <span class="timer">Tiempo: <span id="timer">0</span>s</span>
+    </div>
+
+    <div class="actions">
+      <button id="checkBtn">Verificar</button>
+      <button id="nextBtn" disabled>Siguiente</button>
+      <button id="resetBtn">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="overlay hidden" id="overlay">
+    <div class="modal">
+      <h2 id="modalTitle">Correcto</h2>
+      <p id="modalMsg">¡Has ordenado la frase correctamente!</p>
+      <button id="modalBtn">Siguiente</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
