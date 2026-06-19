@@ -147,17 +147,16 @@ function updateScore() {
     totalPairs.textContent = pairs.length;
 }
 
-async function init() {
-    try {
-        const res = await fetch('pairs.json');
-        pairs = await res.json();
-    } catch {
-        pairs = [
-            { word: 'Hola', meaning: 'Saludo informal' },
-            { word: 'Adiós', meaning: 'Despedida' },
-            { word: 'Casa', meaning: 'Lugar para vivir' },
-        ];
-    }
+function init() {
+    pairs = [
+        { word: "Soberbia", meaning: "Humildad" },
+        { word: "Avaricia", meaning: "Generosidad" },
+        { word: "Lujuria", meaning: "Castidad" },
+        { word: "Envidia", meaning: "Caridad" },
+        { word: "Gula", meaning: "Templanza" },
+        { word: "Ira", meaning: "Paciencia" },
+        { word: "Pereza", meaning: "Diligencia" }
+    ];
     resetGame();
 }
 

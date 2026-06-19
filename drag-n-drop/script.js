@@ -18,16 +18,34 @@ const modalTitle = document.getElementById('modalTitle');
 const modalMsg = document.getElementById('modalMsg');
 const modalBtn = document.getElementById('modalBtn');
 
-async function init() {
-  try {
-    const res = await fetch('words.json');
-    levels = await res.json();
-    levels = shuffle(levels);
-    loadLevel(0);
-    startTimer();
-  } catch (err) {
-    wordPool.textContent = 'Error al cargar las palabras.';
-  }
+function init() {
+  levels = shuffle([
+    {
+      "id": 1,
+      "words": ["Bautismo", "Confesión", "Comunión", "Confirmación"]
+    },
+    {
+      "id": 2,
+      "words": [
+        "Amarás a Dios sobre todas las cosas",
+        "No tomarás el nombre de Dios en vano",
+        "Santificarás las fiestas",
+        "Honrarás a tu padre y a tu madre",
+        "No matarás",
+        "No cometerás actos impuros",
+        "No robarás",
+        "No darás falso testimonio ni mentirás",
+        "No consentirás pensamientos ni deseos impuros",
+        "No codiciarás los bienes ajenos"
+      ]
+    },
+    {
+      "id": 3,
+      "words": ["Jesús", "te llama a ser", "sacerdote", "profeta", "rey"]
+    }
+  ]);
+  loadLevel(0);
+  startTimer();
 }
 
 function shuffle(arr) {
